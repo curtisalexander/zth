@@ -76,7 +76,9 @@ idna==3.11
     #   jsonschema
     #   requests
 ipykernel==7.1.0
-    # via jupyterlab
+    # via
+    #   zth (pyproject.toml)
+    #   jupyterlab
 ipython==9.8.0
     # via ipykernel
 ipython-pygments-lexers==1.1.1
