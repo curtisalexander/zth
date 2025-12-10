@@ -15,6 +15,8 @@ uv venv
 
 # add
 uv add graphviz ipykernel jupyterlab matplotlib numpy
+# assume no GPU
+uv add torch torchvision
 
 # requirements.txt
 uv pip compile pyproject.toml -o requirements.txt --emit-index-url
