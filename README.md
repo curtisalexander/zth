@@ -5,7 +5,7 @@ Following along with [Andrej Karpathy's](https://karpathy.ai/)[Neural Network: Z
 
 ## Setup
 
-```bash
+```powershell
 # init
 uv init
 
@@ -14,12 +14,14 @@ uv venv
 .\venv\Scripts\activate
 
 # add
-uv add ipykernel
-uv add jupyterlab
-
-# kernel
-python -m ipykernel install --name=zth --user
+uv add graphviz ipykernel jupyterlab matplotlib numpy
 
 # requirements.txt
 uv pip compile pyproject.toml -o requirements.txt --emit-index-url
+
+# install graphviz
+winget install graphviz
+
+# update path
+[Environment]::SetEnvironmentVariable("PATH", ($env:PATH + ";C:\Program Files\Graphviz\bin"), "User")
 ```
